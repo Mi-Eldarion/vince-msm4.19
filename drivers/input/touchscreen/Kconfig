@@ -1324,36 +1324,10 @@ config TOUCHSCREEN_ST
 
 source "drivers/input/touchscreen/st/Kconfig"
 
-config TOUCHSCREEN_SYNAPTICS_DSX
-	bool "Synaptics DSX Touchscreen Driver"
-	depends on I2C
-	default n
-	help
-	  Say Y here if you have a Synaptics Touchscreen.
-
-	  If unsure, say N.
-
-	  To compile this driver as a module, choose M here: the
-	  module will be called synaptics_dsx.
-
-source "drivers/input/touchscreen/synaptics_dsx/Kconfig"
-
-config TOUCHSCREEN_SYNAPTICS_TCM
-	bool "Synaptics TCM Touchscreen Driver"
-	depends on I2C
-	default n
-	help
-	  Say Y here if you have a Synaptics Touchscreen.
-
-	  If unsure, say N.
-
-	  To compile this driver as a module, choose M here: the
-	  module will be called synaptics_tcm.
-
-source "drivers/input/touchscreen/synaptics_tcm/Kconfig"
-
-source "drivers/input/touchscreen/focaltech_touch/Kconfig"
-
-source "drivers/input/touchscreen/nt36xxx/Kconfig"
+# vince
+source "drivers/input/touchscreen/nt36672_e7/Kconfig"
+source "drivers/input/touchscreen/td4310_e7/Kconfig"
+source "drivers/input/touchscreen/td4310_lansi_e7/Kconfig"
+source "drivers/input/touchscreen/vituralsar_e7/Kconfig"
 
 endif
