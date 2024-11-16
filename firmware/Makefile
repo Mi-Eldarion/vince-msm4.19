@@ -10,6 +10,8 @@ fwabs := $(addprefix $(srctree)/,$(filter-out /%,$(fwdir)))$(filter /%,$(fwdir))
 
 fw-external-y := $(subst $(quote),,$(CONFIG_EXTRA_FIRMWARE))
 
+fw-shipped-$(CONFIG_TOUCHSCREEN_TD4310_E7) += synaptics/startup_fw_update.img
+fw-shipped-$(CONFIG_TOUCHSCREEN_TD4310_LANSI_E7) += synaptics/startup_fw_update_lansi.img
 fw-shipped-$(CONFIG_TOUCHSCREEN_FT5X46) += ft5446_ofilm.fw ft5446_biel.fw ft5446_biel_auo.fw
 fw-shipped-$(CONFIG_TOUCHSCREEN_SYNAPTICS_DSX_FORCE) += synaptics_biel_oxygen.fw
 fw-shipped-all := $(fw-shipped-y) $(fw-shipped-m) $(fw-shipped-)
