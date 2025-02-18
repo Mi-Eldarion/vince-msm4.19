@@ -46,8 +46,6 @@
 
 #define SYN_I2C_RETRY_TIMES 10
 
-#define rd_msgs  1
-
 static unsigned char *wr_buf;
 
 static struct synaptics_dsx_hw_interface hw_if;
